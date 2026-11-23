@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Registration Form</title>
+
+  <style>
+    body {
+      background-color: plum;
+      font-family: "Times New Roman", serif;
+      font-size: 16px;
+      max-width: 450px;
+      margin: 10px auto;
+      padding: 0 12px;
+    }
+
+    h1 {
+      font-size: 24px;
+      text-align: center;
+      margin: 8px 0 18px;
+    }
+
+    fieldset {
+      padding: 8px 14px 12px;
+      margin-bottom: 8px;
+    }
+
+    legend {
+      font-size: 19px;
+    }
+
+    .row,
+    .outside-row {
+      margin: 12px 0;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 190px;
+      padding: 4px;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+
+    input[type="number"] {
+      width: 70px;
+      padding: 4px;
+      font-size: 14px;
+    }
+
+    select,
+    input[type="date"],
+    input[type="file"],
+    button {
+      font-size: 14px;
+      padding: 3px;
+    }
+
+    textarea {
+      width: 220px;
+      height: 65px;
+      padding: 5px;
+      font-size: 14px;
+      box-sizing: border-box;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+  <h1>Student Registration Form</h1>
+
+  <form>
+    <fieldset>
+      <legend>Personal Information</legend>
+
+      <div class="row">
+        <label for="student-name">Student Name:</label>
+        <input id="student-name" name="studentName" type="text"
+               placeholder="Enter your name" required>
+      </div>
+
+      <div class="row">
+        <label for="email">Email:</label>
+        <input id="email" name="email" type="email"
+               placeholder="Enter your email" required>
+      </div>
+
+      <div class="row">
+        <label for="password">Password:</label>
+        <input id="password" name="password" type="password"
+               placeholder="Enter password" required>
+      </div>
+
+      <div class="row">
+        <label for="age">Age:</label>
+        <input id="age" name="age" type="number" min="1" max="120">
+      </div>
+
+      <div class="row">
+        <span>Gender:</span>
+        <label><input type="radio" name="gender" value="male"> Male</label>
+        <label><input type="radio" name="gender" value="female"> Female</label>
+      </div>
+    </fieldset>
+
+    <div class="outside-row">
+      <span>Skills:</span>
+      <label><input type="checkbox" name="skills" value="html"> HTML</label>
+      <label><input type="checkbox" name="skills" value="css"> CSS</label>
+      <label><input type="checkbox" name="skills" value="javascript"> JavaScript</label>
+    </div>
+
+    <div class="outside-row">
+      <label for="department">Department:</label>
+      <select id="department" name="department">
+        <option value="">Select Department</option>
+        <option value="computer-science">Computer Science</option>
+        <option value="engineering">Engineering</option>
+        <option value="business">Business</option>
+        <option value="arts">Arts</option>
+      </select>
+    </div>
+
+    <div class="outside-row">
+      <label for="course">Select a Course:</label>
+      <input id="course" name="course" type="text">
+    </div>
+
+    <div class="outside-row">
+      <label for="birth-date">Date of Birth:</label>
+      <input id="birth-date" name="birthDate" type="date">
+    </div>
+
+    <div class="outside-row">
+      <label for="address">Address:</label>
+      <textarea id="address" name="address"
+                placeholder="Enter your address"></textarea>
+    </div>
+
+    <div class="outside-row">
+      <label for="photo">Upload Photo:</label>
+      <input id="photo" name="photo" type="file" accept="image/*">
+    </div>
+
+    <button type="submit">Register</button>
+    <button type="reset">Clear</button>
+  </form>
+</body>
+</html>
